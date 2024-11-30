@@ -8,7 +8,7 @@ react 学習用リポジトリ
 
 docker をインストールします
 
-<detail>
+<details>
 <summary>macOS</summary>
 
 ```zsh
@@ -25,12 +25,13 @@ brew install docker-compose
 docker-compose --version  # バージョン確認
 ```
 
-</detail>
+</details>
 
-<detail>
+<details>
+  
 <summary>Windows</summary>
-[!TIP]
-powershellを管理者権限で実行してください。
+
+> powershellは管理者権限で実行してください。
 
 ```powershell
 # chocolateyのインストール
@@ -41,9 +42,9 @@ choco install docker-desktop
 docker --version  # バージョン確認
 ```
 
-</detail>
+</details>
 
-<detail>
+<details>
 <summary>Linux(Ubuntu)</summary>
 
 ```bash
@@ -81,7 +82,7 @@ sudo systemctl enable docker
 echo "Dockerのインストールと設定が完了しました。再ログインが必要です。"
 ```
 
-</detail>
+</details>
 
 ### docker の起動
 
