@@ -6,6 +6,7 @@ import seaborn as sns
 
 
 def main():
+    st.sidebar.title('Menu')
     st.title('Business Intelligence Dashboard')
     st.subheader('Data Analysis')
     st.write('This is a simple dashboard to analyze data')

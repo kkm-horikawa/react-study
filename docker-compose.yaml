@@ -18,8 +18,8 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./server:/server
-    working_dir: /server
+      - ./server:/app
+    working_dir: /app
     tty: true
 
   bi:

@@ -29,8 +29,15 @@ docker-compose --version  # バージョン確認
 
 <detail>
 <summary>Windows</summary>
+:::message
+powershellを管理者権限で実行してください。
+:::
 
 ```powershell
+# chocolateyのインストール
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+# Dockerのインストール
 choco install docker-desktop
 docker --version  # バージョン確認
 ```
