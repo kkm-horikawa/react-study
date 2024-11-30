@@ -10,3 +10,43 @@ services:
       - ./front:/front
     working_dir: /front/react-typescript-weather-app
     tty: true
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./server:/server
+    working_dir: /server
+    tty: true
+
+  bi:
+    build:
+      context: .
+      dockerfile: Dockerfile.bi
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./bi:/bi
+    working_dir: /bi
+    tty: true
+
+  # db:
+  #   image: postgres:14
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: postgres
+  #     POSTGRES_DB: main
+  #   volumes:
+  #     - ./db:/var/lib/postgresql/data
+  #   tty: true
+
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+    tty: true

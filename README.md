@@ -83,3 +83,66 @@ npm install react-router-dom
 ```zsh
 npm install @types/react-router-dom
 ```
+
+## 全て起動
+
+```zsh
+docker-compose up --build
+```
+
+## front コンテナ
+
+- フロントエンドのコンテナです。
+- `Dockerfile.front` に記載されている内容でビルドされます。
+
+### ビルド方法
+
+```bash
+docker-compose up --build front
+```
+
+### 起動方法
+
+```bash
+docker-compose up front
+```
+
+## server コンテナ
+
+- サーバーサイドのコンテナです。
+- `Dockerfile.server` に記載されている内容でビルドされます。
+
+### ビルド方法
+
+```bash
+docker build -t server -f Dockerfile.server .
+```
+
+### 起動方法
+
+```bash
+docker run -it -p 8000:8000 server
+```
+
+## bi コンテナ
+
+- BI ツールのコンテナです。
+- `Dockerfile.bi` に記載されている内容でビルドされます。
+
+### ビルド方法
+
+```bash
+docker build -t bi-container -f Dockerfile.bi .
+```
+
+### 起動方法
+
+```bash
+docker run -it -p 8501:8501 bi-container
+```
+
+### コンテナログイン
+
+```bash
+docker run -it bi-container /bin/bash
+```
