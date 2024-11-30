@@ -1,0 +1,3 @@
+black
+django==4.2
+djangorestframework

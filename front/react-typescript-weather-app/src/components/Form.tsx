@@ -1,3 +1,6 @@
+import { Button } from "@mui/material";
+import { Input } from "@mui/material";
+
 type FormProps = {
   setCity: React.Dispatch<React.SetStateAction<string>>;
   getWeather: (e: any) => void;
@@ -6,15 +9,10 @@ type FormProps = {
 const Form = (props: FormProps) => {
   return (
     <form>
-      <input
-        type="text"
-        name="city"
-        placeholder="都市名"
-        onChange={(e) => props.setCity(e.target.value)}
-      />
-      <button type="submit" onClick={props.getWeather}>
+      <Input onChange={(e) => props.setCity(e.target.value)} />
+      <Button variant="contained" onClick={props.getWeather}>
         Get Weather
-      </button>
+      </Button>
     </form>
   );
 };

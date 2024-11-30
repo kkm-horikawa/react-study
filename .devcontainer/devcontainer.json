@@ -11,6 +11,22 @@
     "ghcr.io/devcontainers-extra/features/neofetch:1": {},
     "ghcr.io/devcontainers-extra/features/node-asdf:0": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "hancel.google-translate",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-mermaid",
+        "esbenp.prettier-vscode",
+        "Equinusocio.vsc-material-theme",
+        "equinusocio.vsc-material-theme-icons",
+        "donjayamanne.python-extension-pack",
+        "ms-python.black-formatter",
+        "monosans.djlint",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
   }
 
   // Features to add to the dev container. More info: https://containers.dev/features.
