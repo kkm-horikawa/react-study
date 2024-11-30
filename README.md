@@ -36,10 +36,10 @@ docker-compose up -d
 docker-compose exec front sh
 ```
 
-### プロジェクトの作成
+### プロジェクトの作成(vite)
 
 ```zsh
-npx create-react-app . --template typescript --use-npm
+npm init vite@latest
 ```
 
 ### プロジェクトの起動
