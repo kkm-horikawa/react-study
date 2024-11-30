@@ -29,9 +29,8 @@ docker-compose --version  # バージョン確認
 
 <detail>
 <summary>Windows</summary>
-:::message
+[!TIP]
 powershellを管理者権限で実行してください。
-:::
 
 ```powershell
 # chocolateyのインストール
