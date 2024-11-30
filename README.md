@@ -16,6 +16,15 @@ brew install --cask docker
 docker --version  # バージョン確認
 ```
 
+### docker-compose のインストール
+
+docker-compose をインストールします
+
+```zsh
+brew install docker-compose
+docker-compose --version  # バージョン確認
+```
+
 </detail>
 
 <detail>
@@ -67,15 +76,6 @@ echo "Dockerのインストールと設定が完了しました。再ログイ�
 ```
 
 </detail>
-
-### docker-compose のインストール
-
-docker-compose をインストールします
-
-```zsh
-brew install docker-compose
-docker-compose --version  # バージョン確認
-```
 
 ### docker の起動
 
