@@ -8,10 +8,65 @@ react 学習用リポジトリ
 
 docker をインストールします
 
+<detail>
+<summary>macOS</summary>
+
 ```zsh
 brew install --cask docker
 docker --version  # バージョン確認
 ```
+
+</detail>
+
+<detail>
+<summary>Windows</summary>
+
+```powershell
+choco install docker-desktop
+docker --version  # バージョン確認
+```
+
+</detail>
+
+<detail>
+<summary>Linux(Ubuntu)</summary>
+
+```bash
+#!/bin/bash
+
+# Dockerのインストール
+
+# Dockerリポジトリを追加
+sudo apt-get update -y
+sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Dockerのインストール
+sudo apt-get update -y
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+# Docker Composeのインストール
+sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Dockerのバージョンの確認
+docker --version
+docker-compose --version
+
+# ユーザをdockerグループに追加
+sudo usermod -aG docker $USER
+
+# グループの変更を即時反映
+newgrp docker
+
+# Dockerの自動起動
+sudo systemctl enable docker
+
+echo "Dockerのインストールと設定が完了しました。再ログインが必要です。"
+```
+
+</detail>
 
 ### docker-compose のインストール
 
@@ -92,7 +147,7 @@ docker-compose up --build
 
 ## front コンテナ
 
-- フロントエンドのコンテナです。
+- フロン ��� エンドのコンテナです。
 - `Dockerfile.front` に記載されている内容でビルドされます。
 
 ### ビルド方法
